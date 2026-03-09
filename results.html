@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results & Case Studies | Contractor Arsenal</title>
+<meta name="description" content="Real results from Contractor Arsenal contractor websites. See how painters, roofers, and landscapers generate more leads and revenue with our sites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#1F1F1F;--bg2:#282828;--bg3:#303030;--bg4:#3a3a3a;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.16);
+  --red:#EF4444;--red2:#DC2626;--red3:#F87171;
+  --red-dim:rgba(239,68,68,0.12);--red-bg:rgba(239,68,68,0.08);
+  --gold:#F59E0B;--gold2:#FBBF24;--gold-dim:rgba(245,158,11,0.12);
+  --green:#10B981;--green-dim:rgba(16,185,129,0.12);
+  --text:#F5F5F5;--text2:#C0C0C0;--text3:#888;--text4:#555;
+  --shadow:0 2px 16px rgba(0,0,0,0.35);--shadow2:0 8px 40px rgba(0,0,0,0.5);
+  --r:8px;--r2:12px;
+}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--red);border-radius:4px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(31,31,31,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center;padding:0 2rem;box-shadow:0 1px 20px rgba(0,0,0,0.4)}
+.nav-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;gap:2rem}
+.nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none;flex-shrink:0}
+.nav-logo img{height:40px;width:auto}
+.nav-logo-text{font-size:1rem;font-weight:900;color:var(--text);font-family:'Barlow Condensed',sans-serif;letter-spacing:0.03em}
+.nav-links{display:flex;gap:0;list-style:none;margin-left:1rem}
+.nav-links a{padding:0.5rem 1rem;font-size:0.87rem;color:var(--text3);text-decoration:none;border-radius:6px;transition:color 0.2s;font-weight:600}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-links a.active{color:var(--text)}
+.nav-right{margin-left:auto;display:flex;gap:0.6rem;align-items:center}
+.nav-btn-primary{background:var(--red);color:#fff;border:none;padding:0.5rem 1.15rem;border-radius:6px;font-size:0.82rem;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:0.4rem;transition:all 0.2s;font-family:'Barlow',sans-serif}
+.nav-btn-primary:hover{background:var(--red2);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:rgba(31,31,31,0.99);backdrop-filter:blur(20px);z-index:99;flex-direction:column;padding:2rem 1.5rem;gap:0;overflow-y:auto;border-top:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:1rem 0;font-size:1.1rem;font-weight:700;color:var(--text2);text-decoration:none;border-bottom:1px solid var(--border);display:block;transition:color 0.2s}
+.mobile-menu a:hover{color:var(--red)}
+
+/* HERO */
+.hero{background:linear-gradient(160deg,#1a0a0a 0%,#2a1010 40%,#1F1F1F 100%);padding:7rem 2rem 5rem;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:700px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(239,68,68,0.1) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--red-dim);border:1px solid rgba(239,68,68,0.3);border-radius:4px;padding:0.35rem 1rem;font-size:0.75rem;font-weight:700;color:var(--red);margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:0.06em;font-family:'Barlow Condensed',sans-serif}
+.hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:900;line-height:1.1;font-family:'Barlow Condensed',sans-serif;margin-bottom:1.25rem}
+.hero h1 span{color:var(--red)}
+.hero p{font-size:1.05rem;color:var(--text2);max-width:640px;margin:0 auto;line-height:1.8}
+
+/* STATS BAR */
+.stats-bar{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 2rem}
+.stats-bar-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center}
+.sbar-num{font-size:2.8rem;font-weight:900;color:var(--red);font-family:'Barlow Condensed',sans-serif;line-height:1;margin-bottom:0.3rem}
+.sbar-label{font-size:0.78rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;line-height:1.4}
+
+/* SECTIONS */
+section{padding:5rem 2rem}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--red-dim);border:1px solid rgba(239,68,68,0.3);border-radius:4px;padding:0.3rem 0.9rem;font-size:0.75rem;font-weight:700;color:var(--red);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.06em;font-family:'Barlow Condensed',sans-serif}
+.section-title{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:900;color:var(--text);font-family:'Barlow Condensed',sans-serif;line-height:1.1}
+.section-title span{color:var(--red)}
+.section-sub{font-size:0.95rem;color:var(--text2);margin:0.6rem 0 0;max-width:560px;line-height:1.7}
+
+/* CASE STUDY CARDS */
+.case-study{background:var(--bg2);border:1.5px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:3rem;box-shadow:var(--shadow2);transition:border-color 0.25s}
+.case-study:hover{border-color:var(--red)}
+.cs-header{background:var(--bg3);border-bottom:1px solid var(--border);padding:1.5rem 2rem;display:flex;align-items:center;gap:1rem}
+.cs-trade-icon{width:48px;height:48px;border-radius:10px;background:var(--red-dim);border:1px solid rgba(239,68,68,0.25);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0}
+.cs-trade-name{font-size:1.2rem;font-weight:900;color:var(--text);font-family:'Barlow Condensed',sans-serif}
+.cs-trade-sub{font-size:0.8rem;color:var(--text3)}
+.cs-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.cs-before,.cs-after{padding:2rem}
+.cs-before{border-right:1px solid var(--border)}
+.cs-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.4rem}
+.cs-label.before-label{color:var(--text4)}
+.cs-label.after-label{color:var(--green)}
+.cs-img-placeholder{width:100%;aspect-ratio:16/9;border-radius:8px;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:0.8rem;color:var(--text4);margin-bottom:1rem;overflow:hidden}
+.cs-img-placeholder img{width:100%;height:100%;object-fit:cover}
+.cs-points{display:flex;flex-direction:column;gap:0.5rem}
+.cs-point{font-size:0.83rem;color:var(--text2);padding-left:1.1rem;position:relative;line-height:1.5}
+.cs-point::before{content:'→';position:absolute;left:0;color:var(--red);font-weight:900;font-size:0.8rem}
+.cs-metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--border)}
+.cs-metric{padding:1.25rem 1.5rem;text-align:center;border-right:1px solid var(--border)}
+.cs-metric:last-child{border-right:none}
+.cs-metric-num{font-size:1.8rem;font-weight:900;color:var(--green);font-family:'Barlow Condensed',sans-serif;line-height:1}
+.cs-metric-label{font-size:0.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.05em;margin-top:0.25rem}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:2.5rem}
+.testi-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r2);padding:1.75rem;transition:all 0.25s;box-shadow:var(--shadow)}
+.testi-card:hover{border-color:var(--red);transform:translateY(-4px)}
+.testi-stars{color:var(--gold2);font-size:1rem;margin-bottom:0.85rem}
+.testi-quote{font-size:0.88rem;color:var(--text2);line-height:1.75;font-style:italic;margin-bottom:1.25rem}
+.testi-name{font-weight:700;color:var(--text);font-size:0.9rem;margin-bottom:0.15rem}
+.testi-company{color:var(--text3);font-size:0.78rem}
+
+/* CTA */
+#cta{background:linear-gradient(160deg,#1a0a0a 0%,#2a1010 40%,#1F1F1F 100%);text-align:center;position:relative;overflow:hidden}
+#cta::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(239,68,68,0.1) 0%,transparent 70%);pointer-events:none}
+.cta-inner{max-width:620px;margin:0 auto;position:relative;z-index:1}
+.cta-logo{width:72px;height:72px;border-radius:12px;margin:0 auto 1.5rem;overflow:hidden;border:2px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center}
+.cta-logo img{width:65%;height:65%;object-fit:contain}
+.cta-inner h2{font-size:clamp(2rem,4vw,3rem);font-weight:900;color:var(--text);font-family:'Barlow Condensed',sans-serif;line-height:1.1;margin-bottom:0.75rem}
+.cta-inner h2 span{color:var(--red)}
+.cta-inner p{font-size:0.95rem;color:var(--text2);margin-bottom:2rem;line-height:1.75}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.btn-primary{display:inline-flex;align-items:center;gap:0.5rem;padding:0.88rem 2rem;border-radius:6px;background:var(--red);color:#fff;font-size:0.92rem;font-weight:700;text-decoration:none;transition:all 0.2s;box-shadow:0 4px 16px rgba(239,68,68,0.3);font-family:'Barlow',sans-serif}
+.btn-primary:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(239,68,68,0.5)}
+.btn-ghost{display:inline-flex;align-items:center;gap:0.5rem;padding:0.88rem 2rem;border-radius:6px;border:1.5px solid var(--border2);color:var(--text2);font-size:0.92rem;font-weight:700;text-decoration:none;transition:all 0.2s;background:transparent;font-family:'Barlow',sans-serif}
+.btn-ghost:hover{border-color:var(--red);color:var(--red)}
+.cta-stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap}
+.cta-stat{font-size:0.88rem;color:var(--text2)}
+.cta-stat strong{color:var(--text);font-family:'Barlow Condensed',sans-serif;font-size:1.1rem}
+
+/* FOOTER */
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-copy{font-size:0.78rem;color:var(--text3)}
+.fsoc{width:34px;height:34px;border-radius:6px;background:var(--bg3);border:1px solid var(--border2);color:var(--text2);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:0.85rem;transition:all 0.2s}
+.fsoc:hover{border-color:var(--red);color:var(--red)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .stats-bar-inner{grid-template-columns:repeat(3,1fr)}
+  .cs-body{grid-template-columns:1fr}
+  .cs-before{border-right:none;border-bottom:1px solid var(--border)}
+}
+@media(max-width:768px){
+  nav{padding:0 1rem;height:60px}
+  .nav-links,.nav-right{display:none}
+  .hamburger{display:flex}
+  .mobile-menu{top:60px}
+  section{padding:3.5rem 1.2rem}
+  .hero{padding:5.5rem 1.5rem 3.5rem}
+  .stats-bar-inner{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .cs-metrics{grid-template-columns:1fr}
+  .cs-metric{border-right:none;border-bottom:1px solid var(--border)}
+  .cs-metric:last-child{border-bottom:none}
+  .cta-btns{flex-direction:column;align-items:center}
+}
+@media(max-width:480px){
+  .stats-bar-inner{grid-template-columns:1fr;gap:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+      <span class="nav-logo-text">Contractor Arsenal</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="results.html" class="active">Results</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="apply.html" class="nav-btn-primary">Apply Now &#8599;</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="closeMenu()">&#127968; Home</a>
+  <a href="results.html" onclick="closeMenu()">&#128202; Results</a>
+  <a href="about.html" onclick="closeMenu()">&#8505;&#65039; About</a>
+  <a href="apply.html" onclick="closeMenu()">&#128203; Apply Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner reveal">
+    <div class="hero-badge">&#128202; Proof It Works</div>
+    <h1>Real Results From<br><span>Contractor Arsenal Sites</span></h1>
+    <p>Every metric you see is real. Painters, roofers, and landscapers across the country are generating more leads, more calls, and more revenue with our websites.</p>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner reveal">
+    <div>
+      <div class="sbar-num">$850K+</div>
+      <div class="sbar-label">Revenue Generated for Clients</div>
+    </div>
+    <div>
+      <div class="sbar-num">$23K</div>
+      <div class="sbar-label">Average First Contract Won</div>
+    </div>
+    <div>
+      <div class="sbar-num">9.2x</div>
+      <div class="sbar-label">Average Return on Investment</div>
+    </div>
+  </div>
+</div>
+
+<!-- CASE STUDIES -->
+<section>
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem">
+      <div class="section-badge" style="display:inline-flex">&#127942; Case Studies</div>
+      <h2 class="section-title" style="text-align:center;margin-top:0.5rem">Before &amp; After: <span>The Transformation</span></h2>
+      <p style="font-size:0.95rem;color:var(--text2);text-align:center;margin:0.75rem auto 0;max-width:560px">See exactly what changed, what we built, and how it performed.</p>
+    </div>
+
+    <!-- CASE STUDY 1: PAINTING -->
+    <div class="case-study reveal">
+      <div class="cs-header">
+        <div class="cs-trade-icon">&#127912;</div>
+        <div>
+          <div class="cs-trade-name">Premier Painting LLC</div>
+          <div class="cs-trade-sub">Exterior &amp; Interior Painting · Charlotte, NC</div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-before">
+          <div class="cs-label before-label">&#10005; Before Contractor Arsenal</div>
+          <div class="cs-img-placeholder">
+            <img src="https://github.com/user-attachments/assets/dd186500-6297-4699-9002-ef0fb2a3f1d3" alt="Before website">
+          </div>
+          <div class="cs-points">
+            <div class="cs-point">Generic template site that didn't reflect the brand</div>
+            <div class="cs-point">2–3 leads per month, mostly from word of mouth</div>
+            <div class="cs-point">Not ranking on Google for any local terms</div>
+            <div class="cs-point">No lead form — customers had to call or email directly</div>
+          </div>
+        </div>
+        <div class="cs-after">
+          <div class="cs-label after-label">&#10003; After Contractor Arsenal</div>
+          <div class="cs-img-placeholder">
+            <img src="https://github.com/user-attachments/assets/e1706902-da3a-419b-8cd1-862fbd61082b" alt="After website">
+          </div>
+          <div class="cs-points">
+            <div class="cs-point">Custom site built for painters, launched in 68 hours</div>
+            <div class="cs-point">18 qualified leads in the first 60 days</div>
+            <div class="cs-point">Ranking page 1 for "exterior painter Charlotte NC"</div>
+            <div class="cs-point">Quote forms route instantly to phone via SMS</div>
+          </div>
+        </div>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric">
+          <div class="cs-metric-num">18</div>
+          <div class="cs-metric-label">Leads in first 60 days</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">$42K</div>
+          <div class="cs-metric-label">Revenue in first quarter</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">11x</div>
+          <div class="cs-metric-label">Return on investment</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE STUDY 2: ROOFING -->
+    <div class="case-study reveal">
+      <div class="cs-header">
+        <div class="cs-trade-icon">&#127968;</div>
+        <div>
+          <div class="cs-trade-name">Ridge Pro Roofing</div>
+          <div class="cs-trade-sub">Residential &amp; Commercial Roofing · Austin, TX</div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-before">
+          <div class="cs-label before-label">&#10005; Before Contractor Arsenal</div>
+          <div class="cs-img-placeholder">
+            <img src="https://github.com/user-attachments/assets/92e12d9a-5c1a-4231-8b58-2a874f063539" alt="Before roofing website">
+          </div>
+          <div class="cs-points">
+            <div class="cs-point">Outdated site built in 2018 — barely mobile friendly</div>
+            <div class="cs-point">Relying 100% on referrals and Angi leads (high cost)</div>
+            <div class="cs-point">No Google Business integration or reviews visible</div>
+            <div class="cs-point">Slow load time — bouncing mobile visitors</div>
+          </div>
+        </div>
+        <div class="cs-after">
+          <div class="cs-label after-label">&#10003; After Contractor Arsenal</div>
+          <div class="cs-img-placeholder">
+            <img src="https://github.com/user-attachments/assets/32b1e767-b22d-41cd-bea9-7bf145b638aa" alt="After roofing website">
+          </div>
+          <div class="cs-points">
+            <div class="cs-point">Modern, fast site with storm damage landing page</div>
+            <div class="cs-point">Cut Angi spend by 60% — replaced with organic leads</div>
+            <div class="cs-point">Google Business reviews displayed on homepage</div>
+            <div class="cs-point">Page 1 ranking for "roofing company Austin TX"</div>
+          </div>
+        </div>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric">
+          <div class="cs-metric-num">12</div>
+          <div class="cs-metric-label">Leads/month avg (was 4)</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">$67K</div>
+          <div class="cs-metric-label">New contracts in 90 days</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">9.6x</div>
+          <div class="cs-metric-label">Return on investment</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE STUDY 3: LANDSCAPING -->
+    <div class="case-study reveal">
+      <div class="cs-header">
+        <div class="cs-trade-icon">&#127807;</div>
+        <div>
+          <div class="cs-trade-name">Greenscape Pros</div>
+          <div class="cs-trade-sub">Lawn Care &amp; Landscaping · Denver, CO</div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-before">
+          <div class="cs-label before-label">&#10005; Before Contractor Arsenal</div>
+          <div class="cs-img-placeholder">
+            <img src="https://github.com/user-attachments/assets/957e7a58-7b91-4b73-944e-e67e7afc3657" alt="Before landscaping website">
+          </div>
+          <div class="cs-points">
+            <div class="cs-point">Facebook page acting as their "website"</div>
+            <div class="cs-point">Zero organic search traffic — invisible on Google</div>
+            <div class="cs-point">Losing jobs to smaller competitors with better sites</div>
+            <div class="cs-point">No quote form — customers gave up trying to contact</div>
+          </div>
+        </div>
+        <div class="cs-after">
+          <div class="cs-label after-label">&#10003; After Contractor Arsenal</div>
+          <div class="cs-img-placeholder">
+            <img src="https://github.com/user-attachments/assets/b3e6b468-65c7-4b60-b2b7-3b9f0d08ba47" alt="After landscaping website">
+          </div>
+          <div class="cs-points">
+            <div class="cs-point">Full site with seasonal service pages for year-round SEO</div>
+            <div class="cs-point">480% increase in organic traffic within 4 months</div>
+            <div class="cs-point">Lead forms sending real-time SMS alerts to owner's phone</div>
+            <div class="cs-point">Ranking for 12 local landscaping keywords in Denver</div>
+          </div>
+        </div>
+      </div>
+      <div class="cs-metrics">
+        <div class="cs-metric">
+          <div class="cs-metric-num">480%</div>
+          <div class="cs-metric-label">Traffic growth in 4 months</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">$38K</div>
+          <div class="cs-metric-label">New contracts won online</div>
+        </div>
+        <div class="cs-metric">
+          <div class="cs-metric-num">8.1x</div>
+          <div class="cs-metric-label">Return on investment</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--bg2);padding:5rem 2rem">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center">
+      <div class="section-badge" style="display:inline-flex">&#9733; Client Reviews</div>
+      <h2 class="section-title" style="text-align:center;margin-top:0.5rem">What <span>Contractors Say</span></h2>
+    </div>
+    <div class="testi-grid reveal" style="transition-delay:0.1s">
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"From 2–3 leads a month to 18 qualified leads in 60 days. The team knew exactly what contractors need online. My competitors don't stand a chance."</p>
+        <div class="testi-name">Marcus T.</div>
+        <div class="testi-company">Premier Painting LLC · Charlotte, NC</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"I was nervous about the cost but it paid for itself in 3 weeks. Got my first big job from a lead that found us on Google. The site looks way more professional."</p>
+        <div class="testi-name">David R.</div>
+        <div class="testi-company">Ridge Pro Roofing · Austin, TX</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"Best investment I've made for my business. The lead forms make it so easy for people to request quotes. Getting 3–4 solid leads per week now instead of relying on word of mouth."</p>
+        <div class="testi-name">Jennifer M.</div>
+        <div class="testi-company">Painting Company Owner · Charlotte, NC</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"I had a Facebook page and thought that was enough. Contractor Arsenal showed me what I was missing. Within 90 days I had more inbound leads than I knew what to do with."</p>
+        <div class="testi-name">Carlos M.</div>
+        <div class="testi-company">Greenscape Pros · Denver, CO</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"Fast, professional, and they actually understand roofing. Not just web designers who don't know the trades. The storm damage page alone has brought in 3 big insurance jobs."</p>
+        <div class="testi-name">Ryan K.</div>
+        <div class="testi-company">K&amp;R Roofing · Nashville, TN</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"Launched in 3 days and had my first online lead within a week. It felt too fast — but the quality is there. My phone rings now instead of silence."</p>
+        <div class="testi-name">Tony B.</div>
+        <div class="testi-company">All-Pro Painters · Phoenix, AZ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="section-inner">
+    <div class="cta-inner reveal">
+      <div class="cta-logo">
+        <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="Contractor Arsenal">
+      </div>
+      <h2>Ready to Get <span>Results Like These?</span></h2>
+      <p>Apply in 60 seconds. If you're a fit, we'll build your site and have it live in 48–72 hours. If you're not, we'll tell you upfront.</p>
+      <div class="cta-btns">
+        <a href="apply.html" class="btn-primary">Apply Now — 60 Seconds &#8599;</a>
+        <a href="about.html" class="btn-ghost">Learn About Us</a>
+      </div>
+      <div class="cta-stats">
+        <div class="cta-stat"><strong>50+</strong> Active Sites</div>
+        <div class="cta-stat"><strong>48hr</strong> Launch</div>
+        <div class="cta-stat"><strong>8.4x</strong> Avg. ROI</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-copy">&copy; 2025 Contractor Arsenal. All rights reserved.</span>
+    <a href="https://www.instagram.com/contractorarsenal/" target="_blank" rel="noopener" class="fsoc" title="Instagram">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><defs><linearGradient id="ig" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FFDC80"/><stop offset="30%" stop-color="#F77737"/><stop offset="60%" stop-color="#C13584"/><stop offset="100%" stop-color="#515BD4"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5.5" fill="url(#ig)"/><circle cx="12" cy="12" r="4.2" stroke="#fff" stroke-width="1.8" fill="none"/><circle cx="17.2" cy="6.8" r="1.1" fill="#fff"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  var m=document.getElementById('mobileMenu'),b=document.getElementById('hamburger');
+  var o=m.classList.contains('open');
+  m.classList.toggle('open',!o);b.classList.toggle('open',!o);
+  document.body.style.overflow=o?'':'hidden';
+}
+function closeMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+var io = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      var siblings = Array.from(e.target.parentElement.querySelectorAll('.reveal'));
+      setTimeout(function() { e.target.classList.add('in'); }, Math.min(siblings.indexOf(e.target) * 90, 300));
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:0.08});
+document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+</script>
+</body>
+</html>

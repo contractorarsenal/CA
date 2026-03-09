@@ -7,6 +7,7 @@
 <meta name="description" content="Professional contractor websites built to rank locally and convert visitors into calls. Painters, roofers, landscapers. Launch in 48–72 hours.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -273,6 +274,27 @@ footer{background:var(--bg2);border-top:1.5px solid var(--border);padding:4rem 2
   .services-grid{grid-template-columns:1fr}
   .hero-stats{flex-wrap:wrap;gap:1rem}
 }
+
+/* ── HERO SWIPER CAROUSEL ─────────────────────────── */
+#hero .hero-inner{grid-template-columns:1.15fr 1fr}
+.hero-media{position:relative;height:100%;min-height:680px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(26,26,26,0.98) 0%,rgba(26,26,26,0.92) 30%,rgba(26,26,26,0.65) 52%,rgba(26,26,26,0.18) 72%,rgba(26,26,26,0) 100%);pointer-events:none;z-index:2}
+.heroSwiper{width:100%;max-width:740px;padding:48px 0}
+.heroSwiper .swiper-slide{width:300px;height:400px;border-radius:20px;overflow:hidden;background:#111;box-shadow:0 24px 80px rgba(0,0,0,0.5);transform:scale(0.88);transition:transform 0.45s ease,opacity 0.45s ease;opacity:0.6}
+.heroSwiper .swiper-slide-active{transform:scale(1);opacity:1}
+.heroSwiper .swiper-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-media-float{animation:floatHero 7s ease-in-out infinite}
+@keyframes floatHero{0%{transform:translateY(0)}50%{transform:translateY(-12px)}100%{transform:translateY(0)}}
+@media(max-width:1024px){
+  #hero .hero-inner{grid-template-columns:1fr}
+  .hero-media{min-height:360px;margin-top:1.5rem}
+  .hero-overlay{background:linear-gradient(to bottom,rgba(26,26,26,0) 0%,rgba(26,26,26,0.96) 90%)}
+  .heroSwiper .swiper-slide{width:240px;height:320px}
+}
+@media(max-width:768px){
+  .hero-media{min-height:300px}
+  .heroSwiper .swiper-slide{width:200px;height:270px}
+}
 </style>
 </head>
 <body>
@@ -299,6 +321,7 @@ footer{background:var(--bg2);border-top:1.5px solid var(--border);padding:4rem 2
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="results.html">Results</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
     <div class="nav-right">
@@ -312,6 +335,7 @@ footer{background:var(--bg2);border-top:1.5px solid var(--border);padding:4rem 2
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html" onclick="closeMobileMenu()">&#127968; Home</a>
+  <a href="results.html" onclick="closeMobileMenu()">&#128202; Results</a>
   <a href="about.html" onclick="closeMobileMenu()">&#8505;&#65039; About</a>
   <a href="apply.html" onclick="closeMobileMenu()">&#128203; Apply Now</a>
 </div>
@@ -346,53 +370,18 @@ footer{background:var(--bg2);border-top:1.5px solid var(--border);padding:4rem 2
         </div>
       </div>
     </div>
-    <div class="reveal" style="transition-delay:0.15s">
-      <div class="hero-chat">
-        <div class="chat-titlebar">
-          <div class="chat-dots">
-            <div class="chat-dot red"></div>
-            <div class="chat-dot yellow"></div>
-            <div class="chat-dot green"></div>
-          </div>
-          <span class="chat-title">Contractor Arsenal — New Lead Notification</span>
-        </div>
-        <div class="chat-body">
-          <div class="chat-msg">
-            <div class="chat-avatar"><span>&#128100;</span></div>
-            <div class="chat-bubble user">Hi! I need exterior painting for my home in Charlotte.</div>
-          </div>
-          <div class="chat-msg bot">
-            <div class="chat-avatar">
-              <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="CA" onerror="this.style.display='none';this.parentElement.innerHTML='&#127919;'">
-            </div>
-            <div class="chat-bubble bot-msg">
-<span class="token-name">&#127919; New Lead — Your Site</span>
-<span class="line-label">Service  :</span> Exterior Painting
-<span class="line-label">Location :</span> Charlotte, NC
-<span class="line-label">Source   :</span> Google Search (Organic)
-<span class="line-label">Status   :</span> &#9989; Routed to your phone
-<span class="line-label">Action   :</span> Call back within 24hrs
-            </div>
-          </div>
-          <div class="chat-msg">
-            <div class="chat-avatar"><span>&#128100;</span></div>
-            <div class="chat-bubble user">How quickly can you give me a quote?</div>
-          </div>
-          <div class="chat-msg bot">
-            <div class="chat-avatar">
-              <img src="https://storage.googleapis.com/msgsndr/kfZT6c91jZcZU6PUztl8/media/69387c0a578cc7a588bf9199.png" alt="CA" onerror="this.style.display='none';this.parentElement.innerHTML='&#127919;'">
-            </div>
-            <div class="chat-bubble bot-msg">
-<span class="token-name">Quote Request Captured &#10003;</span>
-Form data sent to your email
-+ SMS alert to your phone &#128242;
-<span class="line-label">&#8594;</span> This is what we build for you!
-            </div>
-          </div>
-        </div>
-        <div class="chat-input-row">
-          <input class="chat-input" placeholder="Your site working 24/7..." readonly>
-          <button class="chat-send">&#8594;</button>
+    <div class="hero-media hero-media-float">
+      <div class="hero-overlay"></div>
+      <div class="swiper heroSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/e1706902-da3a-419b-8cd1-862fbd61082b" alt="Contractor website example"></div>
+          <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/32b1e767-b22d-41cd-bea9-7bf145b638aa" alt="Roofing website example"></div>
+          <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/b3e6b468-65c7-4b60-b2b7-3b9f0d08ba47" alt="Painting website example"></div>
+          <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/fb0e9956-c523-456c-b499-2b979a111bc5" alt="Landscaping website example"></div>
+          <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/92e12d9a-5c1a-4231-8b58-2a874f063539" alt="Lead notification UI"></div>
+          <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/dd186500-6297-4699-9002-ef0fb2a3f1d3" alt="Before after website comparison"></div>
+          <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/957e7a58-7b91-4b73-944e-e67e7afc3657" alt="Mobile view mockup"></div>
+          <div class="swiper-slide"><img src="https://github.com/user-attachments/assets/f242403d-f7b6-45b0-aa37-2f96fec89b19" alt="Results stat card"></div>
         </div>
       </div>
     </div>
@@ -671,7 +660,7 @@ Form data sent to your email
         <div class="footer-col-title">Company</div>
         <ul class="footer-links">
           <li><a href="about.html">About Us</a></li>
-          <li><a href="#testimonials">Results</a></li>
+          <li><a href="results.html">Results</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="apply.html">Apply Now</a></li>
           <li><a href="#compare">Why Us</a></li>
@@ -748,6 +737,34 @@ document.addEventListener('click', function(e) {
   var menu = document.getElementById('mobileMenu');
   var btn = document.getElementById('hamburger');
   if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) closeMobileMenu();
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var heroSwiper = new Swiper(".heroSwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: "auto",
+  speed: 900,
+  autoplay: {
+    delay: 2800,
+    disableOnInteraction: false
+  },
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 140,
+    modifier: 1.5,
+    scale: 0.92,
+    slideShadows: false
+  },
+  breakpoints: {
+    0: { slidesPerView: 1.2, spaceBetween: 14 },
+    768: { slidesPerView: "auto", spaceBetween: 18 }
+  }
 });
 </script>
 </body>
